@@ -1,14 +1,14 @@
 /*
 	===================================================================================================================================================
-	FACULTAD DE ESTUDIOS SUPERIORES ACATL罭
-	UNIVERSIDAD NACIONAL AUT覰OMA DE M蒟ICO
+	FACULTAD DE ESTUDIOS SUPERIORES ACATL脕N
+	UNIVERSIDAD NACIONAL AUT脫NOMA DE M脡XICO
 	
-	M蒚ODOS NUM蒖ICOS II
+	M脡TODOS NUM脡RICOS II
 	GRUPO: 2451
 	PROFESORA CARRILLO RAMIREZ TERESA
-	A袿 2022
+	A脩O 2022
 	
-	M蒚ODO DE NEWTON RAPHSON PARA SISTEMAS DE ECUACIONES NO LINEALES 3x3 Y 2x2
+	M脡TODO DE NEWTON RAPHSON PARA SISTEMAS DE ECUACIONES NO LINEALES 3x3 Y 2x2
 	
 	PROGRAMA REALIZADO POR:
 	-ACEVEDO SANCHEZ DULCE NAOMI
@@ -39,8 +39,8 @@ float er_act; //Aqui se almacena el valor del ultimo error relativo registrado
 
 //PROTOTIPOS
 VECTOR* crear_Nodo(); //Se genera un nodo nuevo cada que se requiera
-float calculoNR(VECTOR *xyz); //Hace el calculo del M閠odo de Newton Raphson para sistemas 3x3
-void calculoNR2(VECTOR *xyz); //Hace el calculo del M閠odo de Newton Raphson para sistemas 2x2
+float calculoNR(VECTOR *xyz); //Hace el calculo del M茅todo de Newton Raphson para sistemas 3x3
+void calculoNR2(VECTOR *xyz); //Hace el calculo del M茅todo de Newton Raphson para sistemas 2x2
 float* matrizInversa3(float *aux); //Calcula la matriz inversa para sistemas 3x3
 float* matrizInversa2(float *aux); //Calcula la matriz inversa para sistemas 2x2
 void imprimirTabla(VECTOR *xyz); //Imprime los resultados en pantalla
@@ -119,9 +119,9 @@ int main()
 						printf("\n\n\tIndique la tolerancia(Ej. 0.00005): ");
 						scanf("%f", &tol);
 						system("cls");
-						while(er_act > tol && cont != num_ite) //Hasta que el error relativo sea menor o hasta que se llegue al m醲imo n鷐ero de iteraciones
+						while(er_act > tol && cont != num_ite) //Hasta que el error relativo sea menor o hasta que se llegue al m谩ximo n煤mero de iteraciones
 						{
-							calculoNR2(xyz); //Calculamos el vector soluci髇 para un sistema 2x2
+							calculoNR2(xyz); //Calculamos el vector soluci贸n para un sistema 2x2
 						}
 						printf("VALORES INICIALES:\n");
 						printf("X = %f\n", xyz->x);
@@ -159,9 +159,9 @@ int main()
 						printf("\n\n\tIndique la tolerancia(Ej. 0.00005): ");
 						scanf("%f", &tol);
 						system("cls");
-						while(er_act > tol && cont != num_ite) //Hasta que el error relativo sea menor o hasta que se llegue al m醲imo n鷐ero de iteraciones
+						while(er_act > tol && cont != num_ite) //Hasta que el error relativo sea menor o hasta que se llegue al m谩ximo n煤mero de iteraciones
 						{
-							calculoNR2(xyz);//Calculamos el vector soluci髇 para un sistema 2x2
+							calculoNR2(xyz);//Calculamos el vector soluci贸n para un sistema 2x2
 						}
 						printf("VALORES INICIALES:\n");
 						printf("X = %f\n", xyz->x);
@@ -201,9 +201,9 @@ int main()
 						printf("\n\n\tIndique la tolerancia(Ej. 0.00005): ");
 						scanf("%f", &tol);
 						system("cls");
-						while(er_act > tol && cont != num_ite) //Hasta que el error relativo sea menor o hasta que se llegue al m醲imo n鷐ero de iteraciones
+						while(er_act > tol && cont != num_ite) //Hasta que el error relativo sea menor o hasta que se llegue al m谩ximo n煤mero de iteraciones
 						{
-							calculoNR(xyz);//Calculamos el vector soluci髇 para un sistema 3x3
+							calculoNR(xyz);//Calculamos el vector soluci贸n para un sistema 3x3
 						}
 						printf("VALORES INICIALES:\n");
 						printf("X = %f\n", xyz->x);
@@ -245,9 +245,9 @@ int main()
 						printf("\n\n\tIndique la tolerancia(Ej. 0.00005): ");
 						scanf("%f", &tol);
 						system("cls");
-						while(er_act > tol && cont != num_ite) //Hasta que el error relativo sea menor o hasta que se llegue al m醲imo n鷐ero de iteraciones
+						while(er_act > tol && cont != num_ite) //Hasta que el error relativo sea menor o hasta que se llegue al m谩ximo n煤mero de iteraciones
 						{
-							calculoNR(xyz); //Calculamos el vector soluci髇 para un sistema 3x3
+							calculoNR(xyz); //Calculamos el vector soluci贸n para un sistema 3x3
 						}
 						printf("VALORES INICIALES:\n");
 						printf("X = %f\n", xyz->x);
@@ -283,11 +283,11 @@ int main()
 
 float calculoNR(VECTOR* xyz) //Hace el calculo del vector solucion para los sistemas 3x3
 {
-	while(xyz->sig != NULL) //Visitamos todos los nodos, hasta llegar al ultimo en el que tenemos informaci髇
+	while(xyz->sig != NULL) //Visitamos todos los nodos, hasta llegar al ultimo en el que tenemos informaci贸n
 	{
 		xyz = xyz->sig;
 	}
-	xyz->sig = crear_Nodo(); //Generamos un nuevo nodo en la posicion siguiente, para almacenar la nueva estimaci髇
+	xyz->sig = crear_Nodo(); //Generamos un nuevo nodo en la posicion siguiente, para almacenar la nueva estimaci贸n
 	float *jacob = (float*)malloc(9*sizeof(float)); //Generamos un arreglo para guardar la matriz jacobiana
 	
 	float f1;
@@ -367,12 +367,12 @@ float calculoNR(VECTOR* xyz) //Hace el calculo del vector solucion para los sist
 
 void calculoNR2(VECTOR *xyz) //Hace el calculo del vector solucion para los sistemas 3x3
 {
-	while(xyz->sig != NULL) //Visitamos todos los nodos, hasta llegar al ultimo en el que tenemos informaci髇
+	while(xyz->sig != NULL) //Visitamos todos los nodos, hasta llegar al ultimo en el que tenemos informaci贸n
 	{
 		xyz = xyz->sig; 
 	}
 	
-	xyz->sig = crear_Nodo(); //Generamos un nuevo nodo en la posicion siguiente, para almacenar la nueva estimaci髇
+	xyz->sig = crear_Nodo(); //Generamos un nuevo nodo en la posicion siguiente, para almacenar la nueva estimaci贸n
 	
 	float *jacob = (float*)malloc(4*sizeof(float)); //Generamos un arreglo para la matriz jacobiana
 	float f1,f2;
@@ -423,7 +423,7 @@ void calculoNR2(VECTOR *xyz) //Hace el calculo del vector solucion para los sist
 	er_act = xyz->sig->error; //Se actualiza el valor del ultimo error evaluado
 }
 
-VECTOR* crear_Nodo() //Aqui se asigna un tama駉 y valores iniciales a los nodos
+VECTOR* crear_Nodo() //Aqui se asigna un tama帽o y valores iniciales a los nodos
 {
 	VECTOR *aux = (VECTOR*)malloc(sizeof(VECTOR)); //Se reserva la memoria de un nodo
 	aux->x = 0;
